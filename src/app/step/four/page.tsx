@@ -1,3 +1,5 @@
+'use client'
+
 import { useLoading } from "@/hooks/useLoading";
 import { useStepperStore } from "@/store/useStepperStore";
 
