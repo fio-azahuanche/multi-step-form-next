@@ -1,7 +1,6 @@
 'use client';
 
 import { Card } from "@/components/Card";
-import { useProcessedFilesStore } from "@/store/useProcessedFilesStore";
 import { useStepperStore } from "@/store/useStepperStore";
 import { useState } from "react";
 
@@ -23,7 +22,6 @@ export default function ThreePage() {
   const { nextStep } = useStepperStore();
   const [username, setUsername] = useState('');
   const [processId, setProcessId] = useState('');
-  const setProcessedFiles = useProcessedFilesStore((state) => state.setProcessedFiles);
 
   const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value);

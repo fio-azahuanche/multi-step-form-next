@@ -69,15 +69,15 @@ body {
   }
 
   .custom-input {
-    @apply focus:outline-blue-600 flex-1 border border-solid rounded-lg border-customGrayLight bg-white py-1.5 pl-2 text-gray-900 placeholder:text-customGrayLight text-base sm:leading-6 z-10 pointer-events-auto;
+    @apply focus:outline-blue-600 flex-1 border border-solid rounded-lg border-customGrayLight bg-white py-2.5 pl-3 text-gray-900 placeholder:text-customCoolGray text-base sm:leading-6 z-10 pointer-events-auto;
   }
 
   .custom-button {
-    @apply w-52 px-4 py-2 z-10 font-medium rounded-lg;
+    @apply w-36 px-4 py-2.5 z-10 rounded-lg;
   }
 
   .custom-button-valid {
-    @apply bg-customStep text-white hover:bg-blue-600;
+    @apply bg-customMarineBlue text-white hover:bg-blue-600;
   }
 
   .custom-button-invalid {
