@@ -1,6 +1,3 @@
-import { DM_Sans } from 'next/font/google';
+import { Ubuntu } from 'next/font/google';
 
-
-
-
-export const baseFont = DM_Sans({ subsets: ['latin'] });
+export const baseFont = Ubuntu({ subsets: ["latin"], weight: ['400', '700'], });

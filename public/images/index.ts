@@ -1,8 +1,9 @@
-export { default as stepOneGray } from './step-one.svg';
-export { default as stepTwoGray } from './step-two-gray.svg';
-export { default as stepThreeGray } from './step-three-gray.svg';
-export { default as stepFourGray } from './step-four-gray.svg';
-export { default as stepTwo } from './step-two.svg';
-export { default as stepThree } from './step-three.svg';
-export { default as stepFour } from './icon-success.svg';
+export { default as stepOneSelected } from './step1_selected.svg';
+export { default as stepTwoSelected } from './step2_selected.svg';
+export { default as stepThreeSelected } from './step3_selected.svg';
+export { default as stepFourSelected } from './step4_selected.svg';
+export { default as stepOne } from './step1.svg';
+export { default as stepTwo } from './step2.svg';
+export { default as stepThree } from './step3.svg';
+export { default as stepFour } from './step4.svg';
 export { default as bgSidebar } from './bg-sidebar-desktop.svg';

@@ -26,7 +26,7 @@ describe('SidebarStepItem Component', () => {
   });
 
   test('should render without crashing', () => {
-    render(<SidebarStepItem step={1} iconBlue="/icon-blue.svg" iconGray="/icon-gray.svg" title="Step 1" />);
+    render(<SidebarStepItem step={1} stepSelected="/icon-blue.svg" stepWhite="/icon-gray.svg" title="Step 1" subtitle=''/>);
     expect(screen.getByAltText('Step 1')).toBeInTheDocument();
     expect(screen.getByText('Step 1')).toBeInTheDocument();
   });
@@ -36,7 +36,7 @@ describe('SidebarStepItem Component', () => {
       activeStep: 1,
       completedSteps: [],
     });
-    render(<SidebarStepItem step={1} iconBlue="/icon-blue.svg" iconGray="/icon-gray.svg" title="Step 1" />);
+    render(<SidebarStepItem step={1} stepSelected="/icon-blue.svg" stepWhite="/icon-gray.svg" title="Step 1" subtitle=''/>);
     expect(screen.getByText('Step 1')).toHaveClass('text-customStep');
     expect(screen.getByAltText('Step 1')).toHaveAttribute('src', '/icon-blue.svg');
   });

@@ -1,8 +1,9 @@
 import {
-  stepOneGray,
-  stepTwoGray,
-  stepThreeGray,
-  stepFourGray,
+  stepOneSelected,
+  stepTwoSelected,
+  stepThreeSelected,
+  stepFourSelected,
+  stepOne,
   stepTwo,
   stepThree,
   stepFour,
@@ -11,10 +12,10 @@ import {
 import { SidebarStepItem } from '@components/SidebarStepItem';
 
 const steps = [
-  { step: 1, iconBlue: stepOneGray, iconGray: stepOneGray, title: 'Step 1' },
-  { step: 2, iconBlue: stepTwo, iconGray: stepTwoGray, title: 'Step 2' },
-  { step: 3, iconBlue: stepThree, iconGray: stepThreeGray, title: 'Step 3' },
-  { step: 4, iconBlue: stepFour, iconGray: stepFourGray, title: 'Step 4' },
+  { step: 1, stepSelected: stepOneSelected, stepWhite: stepOne, title: 'STEP 1', subtitle: 'YOUR INFO' },
+  { step: 2, stepSelected: stepTwoSelected, stepWhite: stepTwo, title: 'STEP 2', subtitle: 'SELECT PLAN' },
+  { step: 3, stepSelected: stepThreeSelected, stepWhite: stepThree, title: 'STEP 3', subtitle: 'ADD-ONS' },
+  { step: 4, stepSelected: stepFourSelected, stepWhite: stepFour, title: 'STEP 4', subtitle: 'SUMMARY' },
 ];
 
 export const Sidebar = () => {
@@ -25,8 +26,8 @@ export const Sidebar = () => {
       style={{ backgroundImage: `url(${bgSidebar.src})` }} 
     >
       <div className="p-6">
-        {steps.map(({ step, title, iconBlue, iconGray }) => (
-          <SidebarStepItem key={step} step={step} title={title} iconBlue={iconBlue} iconGray={iconGray} />
+        {steps.map(({ step, title, stepSelected, stepWhite, subtitle }) => (
+          <SidebarStepItem key={step} step={step} title={title} subtitle={subtitle} stepSelected={stepSelected} stepWhite={stepWhite} />
         ))}
       </div>
     </div>

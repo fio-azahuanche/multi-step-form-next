@@ -2,27 +2,30 @@
 
 import { useStepperStore } from "@/store/useStepperStore";
 import Image from "next/image";
-import iconSuccess from '@public/images/icon-success.svg';
 
 interface SidebarStepItemProps {
-    iconBlue: string; 
-    iconGray: string; 
-    title: string;
-    step: number;
+  stepSelected: string;
+  stepWhite: string;
+  title: string;
+  subtitle: string;
+  step: number;
 }
 
-export const SidebarStepItem = ({ step, iconBlue, iconGray, title }: SidebarStepItemProps) => {
+export const SidebarStepItem = ({ step, stepSelected, stepWhite, title, subtitle }: SidebarStepItemProps) => {
   const { activeStep, completedSteps } = useStepperStore();
 
   const isActive = activeStep === step;
   const isCompleted = completedSteps.includes(step);
 
-  const textColor = isActive ? 'text-customStep' : 'text-customGrayLight';
-  const iconSrc = isCompleted ? iconSuccess : (isActive ? iconBlue : iconGray);
-    return (
-      <div className="flex items-center p-4 ml-2">
-        <Image src={iconSrc} alt={title} width={20} height={20} className="w-6 h-6 mr-3" />
-        <span className={`text-lg-1600 text-sm-1263 font-medium ${textColor}`}>{title}</span>
+  const iconSrc = isCompleted ? stepWhite : (isActive ? stepSelected : stepWhite);
+
+  return (
+    <div className="flex items-center mt-6 p-4 ml-4">
+      <Image src={iconSrc} alt={title} width={50} height={50} className="mr-6" />
+      <div className="flex flex-col">
+        <span className={`text-base font-light text-white`}>{title}</span>
+        <span className={`text-lg font-bold text-white`}>{subtitle}</span>
       </div>
-    )
+    </div>
+  )
 };
