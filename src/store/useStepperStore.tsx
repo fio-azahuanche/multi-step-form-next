@@ -4,6 +4,7 @@ export interface StepperState {
   activeStep: number;
   completedSteps: number[];
   nextStep: () => void;
+  previousStep: () => void;
   setStep: (step: number) => void;
   completeStep: (step: number) => void;
   resetSteps: () => void;
@@ -19,6 +20,10 @@ export const useStepperStore = create<StepperState>((set) => ({
       completedSteps: [...state.completedSteps, state.activeStep],
     };
   }),
+  previousStep: () =>
+    set((state) => ({
+      activeStep: state.activeStep > 1 ? state.activeStep - 1 : state.activeStep,
+    })),
   setStep: (step: number) => set(() => ({
     activeStep: step,
   })),

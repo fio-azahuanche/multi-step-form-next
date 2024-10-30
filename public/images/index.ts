@@ -7,3 +7,8 @@ export { default as stepTwo } from './step2.svg';
 export { default as stepThree } from './step3.svg';
 export { default as stepFour } from './step4.svg';
 export { default as bgSidebar } from './bg-sidebar-desktop.svg';
+export { default as iconArcade } from './icon-arcade.svg';
+export { default as iconAdvanced} from './icon-advanced.svg';
+export { default as iconPro } from './icon-pro.svg';
+
+

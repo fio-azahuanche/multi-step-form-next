@@ -4,8 +4,8 @@ import { baseFont } from "@/config/fonts";
 
 
 export const metadata: Metadata = {
-  title: "Summary to Interval Tool",
-  description: "Summary to Interval Tool",
+  title: "MultiStep Form",
+  description: "MultiStep Form",
 };
 
 export default function RootLayout({
