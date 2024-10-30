@@ -1,29 +1,48 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
-
 import { useStepperStore } from '@/store/useStepperStore';
 
 export default function OnePage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [errors, setErrors] = useState({ name: '', email: '', phoneNumber: '' });
 
   const { nextStep } = useStepperStore();
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Regex para validación de email y número de teléfono
+  const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const phoneRegex = /^\+?[0-9]{1,3}?[0-9]{7,14}$/;
+
+  const handleNameChange = (e: any) => {
     setName(e.target.value);
+    setErrors((prev) => ({
+      ...prev,
+      name: e.target.value ? '' : 'Name is required.',
+    }));
   };
 
-  const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoneNumber(e.target.value);
+  const handleEmailChange = (e: any) => {
+    const value = e.target.value;
+    setEmail(value);
+    setErrors((prev) => ({
+      ...prev,
+      email: emailRegex.test(value) ? '' : 'Invalid email format.',
+    }));
   };
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const handlePhoneNumberChange = (e: any) => {
+    const value = e.target.value;
+    setPhoneNumber(value);
+    setErrors((prev) => ({
+      ...prev,
+      phoneNumber: phoneRegex.test(value) ? '' : 'Invalid phone number format.',
+    }));
   };
 
-  const isFormValid = name !== '' && email !== '' && phoneNumber !== '';
+  const isFormValid =
+    name && emailRegex.test(email) && phoneRegex.test(phoneNumber);
 
   return (
     <>
@@ -35,6 +54,7 @@ export default function OnePage() {
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            {/* Campo de Nombre */}
             <div className="sm:col-span-5">
               <label htmlFor="name" className="text-base text-customMarineBlue font-medium leading-6">
                 Name
@@ -51,9 +71,11 @@ export default function OnePage() {
                     onChange={handleNameChange}
                   />
                 </div>
+                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
               </div>
             </div>
 
+            {/* Campo de Email */}
             <div className="sm:col-span-5">
               <label htmlFor="email" className="text-base text-customMarineBlue font-medium leading-6">
                 Email Address
@@ -70,9 +92,11 @@ export default function OnePage() {
                     onChange={handleEmailChange}
                   />
                 </div>
+                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
             </div>
 
+            {/* Campo de Número de Teléfono */}
             <div className="sm:col-span-5">
               <label htmlFor="phoneNumber" className="text-base text-customMarineBlue font-medium leading-6">
                 Phone Number
@@ -89,9 +113,11 @@ export default function OnePage() {
                     onChange={handlePhoneNumberChange}
                   />
                 </div>
+                {errors.phoneNumber && <p className="text-red-500 text-sm mt-1">{errors.phoneNumber}</p>}
               </div>
             </div>
 
+            {/* Botón de Siguiente */}
             <div className="sm:col-span-5 flex justify-end">
               <button
                 onClick={nextStep}

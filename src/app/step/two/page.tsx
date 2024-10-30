@@ -68,7 +68,7 @@ export default function TwoPage() {
 
               <div className="flex items-center justify-between w-full pt-10">
                 <span
-                  className="text-customMarineBlue font-semibold cursor-pointer"
+                  className="text-customMarineBlue font-medium hover:text-blue-600 cursor-pointer"
                   onClick={previousStep}
                 >
                   Go back
