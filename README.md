@@ -1,37 +1,36 @@
 # Multi-step Form Solution
 
-Esta es mi solución al [desafío Multi-step Form en Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Este desafío me ayudó a mejorar mis habilidades en el desarrollo de interfaces interactivas y la gestión del estado en aplicaciones modernas.
+This is my solution to the [desafío Multi-step Form en Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). This challenge helped me improve my skills in building interactive user interfaces and managing state in modern applications.
 
-## Tabla de contenidos
+## Table of contents
 
-- [Visión general](#visión-general)
-  - [El desafío](#el-desafío)
-  - [Capturas de pantalla](#capturas-de-pantalla)
-  - [Enlaces](#enlaces)
-- [Mi proceso](#mi-proceso)
-  - [Construido con](#construido-con)
-  - [Lo que aprendí](#lo-que-aprendí)
-  - [Desarrollo futuro](#desarrollo-futuro)
-  - [Recursos útiles](#recursos-útiles)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+- [My process](#my-process)
+  - [Built with](#construido-con)
+  - [What I learned](#what-i-learned)
+  - [Future Development](#future-development)
+  - [Useful Resources](#useful-resources)
 - [Autor](#autor)
 
-## Visión general
+## Overview
 
-### El desafío
+### The Challenge
 
-Los usuarios deben poder:
+Users should be able to:
 
-- Completar cada paso de la secuencia del formulario
-- Volver a un paso anterior para actualizar sus selecciones
-- Ver un resumen de sus selecciones en el paso final y confirmar su orden
-- Ver un diseño adaptable según el tamaño de pantalla de su dispositivo
-- Ver estados de "hover" y "focus" en todos los elementos interactivos
-- Recibir mensajes de validación si:
-  - Se omitió un campo obligatorio
-  - El correo electrónico no está correctamente formateado
-  - Se intentó enviar un paso sin haber hecho una selección
+- Complete each step of the form sequence
+- Go back to a previous step to update their selections
+- See a summary of their selections in the final step and confirm their order
+- View a responsive design depending on their device screen size
+- See hover and focus states for all interactive elements
+- Receive validation messages if:
+  - A required field is missing
+  - The email format is incorrect
+  - A step is submitted without a selection
 
-### Capturas de pantalla
+### Screenshots
 
 ![Desktop Step 1](public/design/desktop-design-step-1.jpg)
 ![Desktop Step 2](public/design/desktop-design-step-2-monthly.jpg)
@@ -44,33 +43,33 @@ Los usuarios deben poder:
 - [Solución en Frontend Mentor](#)
 - [Demo en vivo](#)-->
 
-## Mi proceso
+## My process
 
 ### Construido con
 
-- [Next.js](https://nextjs.org/) - Framework de React para aplicaciones web
-- [Zustand](https://zustand-demo.pmnd.rs/) - Biblioteca de gestión de estado
-- [Tailwind CSS](https://tailwindcss.com/) - Framework de estilos para un diseño rápido y moderno
+- [Next.js](https://nextjs.org/) - React framework for web applications
+- [Zustand](https://zustand-demo.pmnd.rs/) - State management library
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework for fast and modern design
 
-### Lo que aprendí
+### What I Learned
 
-- Uso de Zustand para gestionar el estado global de los formularios
-- Implementación de un flujo de formularios por pasos con Next.js
-- Validación de formularios con React Hook Form o alguna otra solución (si usaste una, agrégala aquí)
-- Mejores prácticas en diseño responsive con Tailwind CSS
+- Using Zustand to manage global form state
+- Implementing a multi-step form flow with Next.js
+- Form validation with React Hook Form (or any other solution you used)
+- Best practices for responsive design with Tailwind CSS
 
-### Desarrollo futuro
+### Future Development
 
-Algunas mejoras que podría agregar en el futuro:
+Some improvements I might add in the future:
 
-- Persistencia del estado del formulario en localStorage para evitar pérdidas de datos
-- Animaciones entre pasos para una mejor experiencia de usuario
-- Implementación de pruebas con Jest o Cypress
+- Persisting form state in localStorage to prevent data loss
+- Adding animations between steps for a better user experience
+- Implementing tests with Jest or Cypress
 
 ### Recursos útiles
 
-- [Documentación de Next.js](https://nextjs.org/docs)
-- [Guía oficial de Zustand](https://docs.pmnd.rs/zustand/getting-started)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Zustand Official Guide](https://docs.pmnd.rs/zustand/getting-started)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
 
 ## Autor
@@ -81,6 +80,4 @@ Algunas mejoras que podría agregar en el futuro:
 
 ---
 
-Este proyecto fue desarrollado como parte del desafío de Frontend Mentor. ¡Cualquier retroalimentación es bienvenida!
-
-# multi-step-form-next
+This project was developed as part of the Frontend Mentor challenge. Any feedback is welcome! 😊
