@@ -2,9 +2,11 @@
 const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
     output: "export", 
-    basePath: isProd ? "/multi-step-form-next" : "", 
-    assetPrefix: isProd ? "/multi-step-form-next/" : "",
+    basePath: "/multi-step-form-next", 
+    assetPrefix: "/multi-step-form-next/",
     images: { unoptimized: true }, 
-    ignoreDuringBuilds: true,
+    eslint: {
+      ignoreDuringBuilds: true, 
+    },  
   };
 export default nextConfig;
